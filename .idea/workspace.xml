@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e45ce9e2-49a0-48e8-ae39-9001fde58e1c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kanban/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/kanban/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kanban/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/kanban/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/admin.py" afterDir="false" />
-    </list>
+    <list default="true" id="e45ce9e2-49a0-48e8-ae39-9001fde58e1c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,6 +95,7 @@
       <workItem from="1716267647957" duration="2390000" />
       <workItem from="1716272016940" duration="321000" />
       <workItem from="1716272355771" duration="10948000" />
+      <workItem from="1716380712926" duration="357000" />
     </task>
     <servers />
   </component>

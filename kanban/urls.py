@@ -15,7 +15,7 @@ router.register('tasks', TasksViewSet, basename='tasks')
 
 urlpatterns = [
     path('get-columns/', GetColumnsView.as_view()),
-    path('get-columns/<pk:int>/', GetColumnsView.as_view()),
+    path('get-columns/<int:pk>/', GetColumnsView.as_view()),
     path('get-sub-tasks/', GetSubTasksView.as_view()),
     path('token/', MyTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('', include(router.urls))
