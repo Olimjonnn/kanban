@@ -40,6 +40,7 @@ class GetColumnsView(CreateAPIView, ListAPIView, RetrieveAPIView):
     permission_classes = [AllowAny]
 
 
+
 class GetSubTasksView(ListAPIView, RetrieveAPIView):
     queryset = SubTasks.objects.all()
     serializer_class = SubTaskSerializer
