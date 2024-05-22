@@ -87,5 +87,5 @@ class CommentsViewSet(viewsets.ModelViewSet):
 
 
 class MyTokenObtainPairView(TokenObtainPairView):
-    permission_classes = [AllowAny]
+
     serializer_class = MyTokenObtainPairSerializer
