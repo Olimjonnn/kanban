@@ -93,7 +93,6 @@ class BoardSerializer(serializers.ModelSerializer):
             instance.columns.add(column)
 
         instance.save()
-
         return instance
 
 
