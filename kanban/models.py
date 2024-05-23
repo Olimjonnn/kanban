@@ -42,6 +42,7 @@ class Tasks(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     deadline = models.DateField()
+    deadline_status = models.BooleanField(default=False)
     assignee = models.ForeignKey(User, on_delete=models.CASCADE, related_name='task_assignee')
     developer = models.ForeignKey(User, on_delete=models.CASCADE, related_name='task_developer')
 

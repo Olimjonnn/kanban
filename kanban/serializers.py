@@ -112,6 +112,7 @@ class TaskListSerializsers(serializers.ModelSerializer):
             'deadline',
             'assignee',
             'developer',
+            'deadline_status',
             'subtasks'
         ]
 

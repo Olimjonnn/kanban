@@ -84,8 +84,9 @@ class TasksViewSet(viewsets.ModelViewSet):
 class CommentsViewSet(viewsets.ModelViewSet):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
+    permission_classes = [AllowAny]
 
 
 class MyTokenObtainPairView(TokenObtainPairView):
-
+    permission_classes = [AllowAny]
     serializer_class = MyTokenObtainPairSerializer

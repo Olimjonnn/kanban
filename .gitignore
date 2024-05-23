@@ -3,3 +3,7 @@ venv
 media/
 db.sqlite
 .idea
+
+
+celerybeat-schedule
+celerybeat.pid
