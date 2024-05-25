@@ -166,26 +166,20 @@ class TaskSerializer(serializers.ModelSerializer):
         return task_instance
 
     def update(self, instance, validated_data):
-        board = validated_data.get('board')
-        author_board = board.author
 
-        if instance.assignee == author_board:
-            subtasks_data = validated_data.pop('subtasks')
+        subtasks_data = validated_data.pop('subtasks')
 
-            # instance.board = validated_data.get('board', instance.board)
-            instance.task_title = validated_data.get('task_title', instance.task_title)
-            instance.task_description = validated_data.get('task_description', instance.task_description)
-            instance.status = validated_data.get('status', instance.status)
-            instance.board = validated_data.get('board', instance.board)
-            instance.deadline = validated_data.get('deadline', instance.deadline)
-            instance.assignee = validated_data.get('assignee', instance.assignee)
-            instance.developer = validated_data.get('developer', instance.developer)
+        instance.task_title = validated_data.get('task_title', instance.task_title)
+        instance.task_description = validated_data.get('task_description', instance.task_description)
+        instance.status = validated_data.get('status', instance.status)
+        instance.board = validated_data.get('board', instance.board)
+        instance.deadline = validated_data.get('deadline', instance.deadline)
+        instance.assignee = validated_data.get('assignee', instance.assignee)
+        instance.developer = validated_data.get('developer', instance.developer)
 
-            self.update_subtasks(subtasks_data)
-            instance.save()
-            return instance
-        else:
-            return "You do not have permission to this operation"
+        self.update_subtasks(subtasks_data)
+        instance.save()
+        return instance
 
     def update_subtasks(self, subtasks: list):
         subtasks_items = dict((i.id, i) for i in self.instance.subtasks.all())

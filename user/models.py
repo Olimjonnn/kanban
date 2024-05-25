@@ -53,5 +53,5 @@ class User(AbstractBaseUser, PermissionsMixin):
     EMAIL_FIELD = []
 
     def __str__(self):
-        return self.phone
+        return str(self.phone)
 
