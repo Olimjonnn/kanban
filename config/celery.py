@@ -15,7 +15,6 @@ app.config_from_object('django.conf:settings', namespace='CELERY')
 
 app.autodiscover_tasks()
 
-
 app.conf.beat_schedule = {
     'check-deadline-every-5-minutes': {
         'task': 'kanban.tasks.check_deadlines',

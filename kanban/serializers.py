@@ -226,11 +226,11 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
         user = User.objects.get(phone=phone)
 
         data = super().validate(attrs)
-        data["user_phone"] = user.phone
+        data["user_phone"] = str(user.phone)
         return data
 
     @classmethod
     def get_token(cls, user):
         token = super(MyTokenObtainPairSerializer, cls).get_token(user=user)
-        token["phone"] = user.phone
+        token["phone"] = str(user.phone)
         return token
